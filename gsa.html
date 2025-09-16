@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSA Prompt Launcher</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .tabs {
+      display: flex;
+      margin-bottom: 20px;
+      justify-content: center;
+    }
+    .tab {
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      background: #e0e0e0;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .tab.active {
+      background: #4285F4;
+      color: white;
+      font-weight: bold;
+    }
+    .content {
+      display: none;
+      padding: 20px;
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .content.active {
+      display: block;
+    }
+    a {
+      color: #4285F4;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 GSA Prompt Launcher</h1>
+
+  <div class="tabs">
+    <div class="tab active" onclick="showContent(1)">Prompt 1</div>
+    <div class="tab" onclick="showContent(2)">Prompt 2</div>
+    <div class="tab" onclick="showContent(3)">Prompt 3</div>
+    <div class="tab" onclick="showContent(4)">Prompt 4</div>
+    <div class="tab" onclick="showContent(5)">Prompt 5</div>
+  </div>
+
+  <div id="content1" class="content active">
+    <h2>Prompt 1</h2>
+    <p>👉 Help me plan a small, festive get-together for 5 friends at home. Suggest a simple menu, a music playlist theme, and one fun game we can play.</p>
+    <p><a href="https://aiskillshouse.com/student/qr-mediator.html?uid=536&promptId=16" target="_blank">Open Prompt 1</a></p>
+  </div>
+
+  <div id="content2" class="content">
+    <h2>Prompt 2</h2>
+    <p>👉 Pick a popular historical movie (Bollywood/Tollywood etc.) and point out three major historical inaccuracies in a fun, myth-busting way.</p>
+    <p><a href="https://aiskillshouse.com/student/qr-mediator.html?uid=536&promptId=15" target="_blank">Open Prompt 2</a></p>
+  </div>
+
+  <div id="content3" class="content">
+    <h2>Prompt 3</h2>
+    <p>👉 I have a week-long break. Suggest a location where I can go with my friends for a weekend getaway.</p>
+    <p><a href="https://aiskillshouse.com/student/qr-mediator.html?uid=536&promptId=14" target="_blank">Open Prompt 3</a></p>
+  </div>
+
+  <div id="content4" class="content">
+    <h2>Prompt 4</h2>
+    <p>👉 The festive season is here. Suggest 5 creative and eco-friendly ways to decorate my home or hostel room to give it a festive vibe.</p>
+    <p><a href="https://aiskillshouse.com/student/qr-mediator.html?uid=536&promptId=13" target="_blank">Open Prompt 4</a></p>
+  </div>
+
+  <div id="content5" class="content">
+    <h2>Prompt 5</h2>
+    <p>👉 Tell me about the Gemini student offer in India.</p>
+    <p><a href="https://aiskillshouse.com/student/qr-mediator.html?uid=536&promptId=6" target="_blank">Open Prompt 5</a></p>
+  </div>
+
+  <script>
+    function showContent(n) {
+      let tabs = document.querySelectorAll(".tab");
+      let contents = document.querySelectorAll(".content");
+      
+      tabs.forEach((tab, i) => {
+        tab.classList.remove("active");
+        contents[i].classList.remove("active");
+      });
+
+      tabs[n-1].classList.add("active");
+      contents[n-1].classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
